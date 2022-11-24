@@ -1,0 +1,10 @@
+h5py==3.7.0
+Keras-Preprocessing==1.1.2
+keras==2.10.0
+pandas==1.5.1
+pip==22.1.2
+streamlit==1.14.0
+tensorflow-estimator==2.10.0
+tensorflow-io-gcs-filesystem==0.27.0
+tensorflow==2.10.0
+numpy == 1.23.4

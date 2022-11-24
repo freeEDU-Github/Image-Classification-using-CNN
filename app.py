@@ -12,12 +12,15 @@ def processed_img(img_path):
     img=load_img(img_path,grayscale=True,target_size=(28, 28, 1))
     img=img_to_array(img)
     img=img/255
-    img=np.expand_dims(img,[0])
+    img=np.expand_dims(img,axis=0)
     answer=model.predict(img)
-    y_class = [num_to_label[round(x[0])] for x in answer]
+    #y_class = [num_to_label[round(x[0])] for x in answer]
+    y_class = answer.argmax(axis=-1)
+
     print(y_class)
     y = " ".join(str(x) for x in y_class)
-    res = y
+    y = int(y)
+    res = num_to_label[y]
 
     print(answer)
     print(res)
